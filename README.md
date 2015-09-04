@@ -12,7 +12,7 @@ Installation
 Install from github with
 
 ``` r
-devtools::install_github("jjchern/cpsmar1980s")
+devtools::install_github("jjchern/NBERcpsmar1990s")
 ```
 
 Since there're 10 years of data, the package is kind of big (about 131.7 MB). It might take a while to download.
