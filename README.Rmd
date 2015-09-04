@@ -1,0 +1,39 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# About
+
+This R data package contains data from NBER's Annual Social and Economic Supplement of the Current Population Survey (ASEC, i.e., CPS March Supplement) data archive, 1990-1991. All the currently available variables (as of Aug. 30, 2015) are included. 
+
+See [NBER's codebooks](http://www.nber.org/data/current-population-survey-data.html) for documentations.
+
+
+# Installation
+
+Install from github with 
+```r
+devtools::install_github("jjchern/cpsmar1980s")
+```
+
+Since there're 10 years of data, the package is kind of big (about 131.7 MB). It might take a while to download.
+
+# Note
+
+The originally released 1994 ASEC file contained an error in `h_idnum`.
+The error is discussed in [CURRENT POPULATION SURVEY, MARCH 1995 - User Note 2](https://www.nber.org/morg/docs/usernote.asc).
+A corrected file was also made available via NBER. The corrected file, which can be downloaded in http://www.nber.org/cps/h_idnum_mar94.html, contains two variables: `h_seq` and `h_idnum`, where
+`h_seq` is an identifying number unique to each household in a given survey,
+and `h_id_num` is the corrected `h_id_num`. In this data package, `cpsmar94.rda` contains a corrected `h_idnum`.
