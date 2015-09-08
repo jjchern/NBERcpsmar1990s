@@ -7,8 +7,6 @@ library(devtools)
 
 getNBERcps = function(year) {
 
-  year = 1994
-
   file = paste0("cpsmar", substr(as.character(year), 3, 4))
   file.zip = paste0(file, ".zip")
   url.zip = paste0("http://www.nber.org/cps/", file.zip)
